@@ -21,18 +21,10 @@ model Post {
   authorId  Int
 }
 
-model Profile {
-  id     Int     @id @default(autoincrement())
-  bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
-}
-
 model User {
   id      Int      @id @default(autoincrement())
   email   String   @unique
   nickName String
   password String
   posts   Post[]
-  profile Profile?
 }
