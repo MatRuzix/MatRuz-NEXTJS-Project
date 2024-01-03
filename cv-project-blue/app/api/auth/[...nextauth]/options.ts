@@ -30,14 +30,14 @@ export const authOptions: NextAuthOptions = {
         });
 
         if (!user) {
-          throw new Error("UserNotFound");
+          throw new Error("wrongCredentials");
         }
 
         const isPasswordValid =
           user.password && (await compare(credentials.password, user.password));
 
         if (!isPasswordValid) {
-          throw new Error("InvalidPassword");
+          throw new Error("wrongCredentials");
         }
 
         return {

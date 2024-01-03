@@ -1,9 +1,5 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center px-8 border">
-      <div>bobek</div>
-    </main>
-  );
+  redirect("/signin");
 }

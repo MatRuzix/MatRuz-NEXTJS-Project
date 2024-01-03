@@ -19,3 +19,5 @@ const AppProvider: React.FC<AppProviderProps> = ({ children, session }) => {
     </React.Suspense>
   );
 };
+
+export default AppProvider;
